@@ -1,0 +1,29 @@
+# Database Configs
+spring:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  datasource:
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      max-lifetime: 2000000
+      connection-timeout: 30000
+  one:
+    datasource:
+      jdbc-url: jdbc:mysql://localhost:3306/dbOne
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: admin
+      password: password
+  two:
+    datasource:
+      jdbc-url: jdbc:mysql://localhost:3306/dbTwo
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: admin
+      password: password
